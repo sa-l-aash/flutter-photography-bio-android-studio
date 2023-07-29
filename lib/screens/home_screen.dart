@@ -58,31 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
         body: SingleChildScrollView(
           padding: const EdgeInsets.all(10),
           child: Column(children: <Widget>[
-            // Row(
-            //   children: [
-            //     TextButton(
-            //       onPressed: () {
-            //         Navigator.of(context).pushReplacement(MaterialPageRoute(
-            //             builder: (context) => const HomeScreen()));
-            //       },
-            //       child: const Text('ALL'),
-            //     ),
-            //     TextButton(
-            //       onPressed: () {
-            //         Navigator.of(context).pushReplacement(MaterialPageRoute(
-            //             builder: (context) => const HomeScreen()));
-            //       },
-            //       child: const Text('ABOUT'),
-            //     ),
-            //     TextButton(
-            //       onPressed: () {
-            //         Navigator.of(context).pushReplacement(MaterialPageRoute(
-            //             builder: (context) => const HomeScreen()));
-            //       },
-            //       child: const Text('HOME'),
-            //     ),
-            //   ],
-            // ),
+            //
             const Text(''),
             ClipRRect(
               borderRadius: BorderRadius.circular(40),
