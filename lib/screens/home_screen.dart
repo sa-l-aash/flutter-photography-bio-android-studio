@@ -154,7 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     icon: const Icon(Icons.favorite),
                     color: Colors.grey,
                   ),
-                  label: ''),
+                  label: 'home'),
               BottomNavigationBarItem(
                   icon: IconButton(
                     onPressed: () {
