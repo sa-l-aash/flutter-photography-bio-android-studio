@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:playground/screens/search_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -139,7 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   icon: IconButton(
                     onPressed: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (context) => const HomeScreen()));
+                          builder: (context) => const SearchScreen()));
                     },
                     icon: const Icon(Icons.search),
                     color: Colors.grey,
