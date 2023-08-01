@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:playground/screens/account_screen.dart';
 import 'package:playground/screens/favorite_screen.dart';
 import 'package:playground/screens/home_screen.dart';
 
@@ -82,7 +83,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   icon: IconButton(
                     onPressed: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (context) => const HomeScreen()));
+                          builder: (context) => const AccountScreen()));
                     },
                     icon: const Icon(Icons.account_box),
                     color: Colors.grey,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:playground/screens/account_screen.dart';
+import 'package:playground/screens/favorite_screen.dart';
 import 'package:playground/screens/search_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -150,7 +152,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   icon: IconButton(
                     onPressed: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (context) => const HomeScreen()));
+                          builder: (context) => const FavoriteScreen()));
                     },
                     icon: const Icon(Icons.favorite),
                     color: Colors.grey,
@@ -160,7 +162,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   icon: IconButton(
                     onPressed: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (context) => const HomeScreen()));
+                          builder: (context) => const AccountScreen()));
                     },
                     icon: const Icon(Icons.account_box),
                     color: Colors.grey,

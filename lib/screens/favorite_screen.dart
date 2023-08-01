@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:playground/screens/account_screen.dart';
 import 'package:playground/screens/home_screen.dart';
 import 'package:playground/screens/search_screen.dart';
 
@@ -15,9 +16,10 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('These are your favorites pictures',
+          title: Text(' Favorites',
               style: GoogleFonts.alkatra()
                   .copyWith(fontSize: 28, fontWeight: FontWeight.w700)),
+          backgroundColor: Colors.black,
         ),
         body: const SingleChildScrollView(
             padding: EdgeInsets.all(40), child: Column(children: <Widget>[])),
@@ -63,7 +65,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                   icon: IconButton(
                     onPressed: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (context) => const HomeScreen()));
+                          builder: (context) => const AccountScreen()));
                     },
                     icon: const Icon(Icons.account_box),
                     color: Colors.grey,
