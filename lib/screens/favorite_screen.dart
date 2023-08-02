@@ -21,8 +21,36 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                   .copyWith(fontSize: 28, fontWeight: FontWeight.w700)),
           backgroundColor: Colors.black,
         ),
-        body: const SingleChildScrollView(
-            padding: EdgeInsets.all(40), child: Column(children: <Widget>[])),
+        body: SingleChildScrollView(
+            padding: const EdgeInsets.all(40),
+            child: Column(children: <Widget>[
+              ClipRRect(
+                borderRadius: BorderRadius.circular(40),
+                child: const Image(
+                  image: NetworkImage(
+                      'https://images.pexels.com/photos/16503530/pexels-photo-16503530/free-photo-of-man-wearing-bright-clothing-standing-in-a-muddy-field.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'),
+                  fit: BoxFit.contain,
+                ),
+              ),
+              const Text(''),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(40),
+                child: const Image(
+                  image: NetworkImage(
+                      'https://images.pexels.com/photos/16883535/pexels-photo-16883535/free-photo-of-woman-in-white-dress-posing-in-building-door.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'),
+                  fit: BoxFit.contain,
+                ),
+              ),
+              const Text(''),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(40),
+                child: const Image(
+                  image: NetworkImage(
+                      'https://images.pexels.com/photos/6110294/pexels-photo-6110294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ])),
         bottomNavigationBar: SizedBox(
           height: 78,
           child: BottomNavigationBar(
