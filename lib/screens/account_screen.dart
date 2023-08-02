@@ -21,17 +21,26 @@ class _AccountScreenState extends State<AccountScreen> {
                   .copyWith(fontSize: 28, fontWeight: FontWeight.w700)),
           backgroundColor: Colors.black,
         ),
-        body: const  SingleChildScrollView(
-            padding:  EdgeInsets.all(40),
-            child: Column(children: <Widget>[
-              Image(image:
-              AssetImage('images/View of the sky_.png')
-              )
+        body: SingleChildScrollView(
+            padding: const EdgeInsets.all(40),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Center(
+                    child:ClipRRect(
+                      borderRadius: BorderRadius.circular(900),
+                      child: const Image(
+                        image: AssetImage('images/HD WALLPAPER.jpeg'),
+                        height: 200,
+                        width: 200,
+                        fit: BoxFit.cover,
+                        alignment: Alignment.centerRight,
+                        //      width: MediaQuery.of(context).size.width * 0.9,
+                      ),
+                    ),
+                  ),
 
-
-            ]
-            )
-        ),
+                ])),
         bottomNavigationBar: SizedBox(
           height: 78,
           child: BottomNavigationBar(
@@ -76,7 +85,7 @@ class _AccountScreenState extends State<AccountScreen> {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) => const HomeScreen()));
                     },
-                    icon: const Icon(Icons.account_box),
+                    icon: const Icon(Icons.person),
                     color: Colors.grey,
                   ),
                   label: ''),
