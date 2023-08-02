@@ -25,7 +25,7 @@ class _AccountScreenState extends State<AccountScreen> {
             padding:  EdgeInsets.all(40),
             child: Column(children: <Widget>[
               Image(image:
-              AssetImage('images/Lion ♌🦁🦁🦁🦁🦁🦁.jpeg')
+              AssetImage('images/View of the sky_.png')
               )
 
 
