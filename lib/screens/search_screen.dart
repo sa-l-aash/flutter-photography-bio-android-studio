@@ -30,19 +30,60 @@ class _SearchScreenState extends State<SearchScreen> {
                   icon: Icon(Icons.search, color: Colors.black),
                 ),
               ),
+              const Text(''),
               Text('Ideas for you',
                   style: GoogleFonts.alkatra().copyWith(
                     fontSize: 28,
                     fontWeight: FontWeight.w700,
                   )),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black),
+                      child: Text(
+                        'Nature',
+                        style: GoogleFonts.alkatra().copyWith(
+                            fontSize: 14, fontWeight: FontWeight.w700),
+                      )),
+                  ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black),
+                      child: Text(
+                        'Seas',
+                        style: GoogleFonts.alkatra().copyWith(
+                            fontSize: 14, fontWeight: FontWeight.w700),
+                      )),
+                  ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black),
+                      child: Text(
+                        'Cars',
+                        style: GoogleFonts.alkatra().copyWith(
+                            fontSize: 14, fontWeight: FontWeight.w700),
+                      )),
+                  ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black),
+                      child: Text(
+                        'Wildlife',
+                        style: GoogleFonts.alkatra().copyWith(
+                            fontSize: 14, fontWeight: FontWeight.w700),
+                      )),
+                ],
+              ),
+              const Text(''),
               Text('Popular',
                   style: GoogleFonts.alkatra().copyWith(
                     fontSize: 28,
                     fontWeight: FontWeight.w700,
                   )),
-            ]
-            )
-        ),
+            ])),
 
         //BOTTOM NAVIGATION BAR
         //The following code creates the bottom navigation bar with 4 icon buttons
