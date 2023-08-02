@@ -40,7 +40,14 @@ class _SearchScreenState extends State<SearchScreen> {
                     fontSize: 28,
                     fontWeight: FontWeight.w700,
                   )),
-            ])),
+            ]
+            )
+        ),
+
+        //BOTTOM NAVIGATION BAR
+        //The following code creates the bottom navigation bar with 4 icon buttons
+        //that route to their respective pages
+
         bottomNavigationBar: SizedBox(
           height: 78,
           child: BottomNavigationBar(
@@ -85,7 +92,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) => const AccountScreen()));
                     },
-                    icon: const Icon(Icons.account_box),
+                    icon: const Icon(Icons.person),
                     color: Colors.grey,
                   ),
                   label: ''),
