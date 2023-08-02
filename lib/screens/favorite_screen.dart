@@ -67,7 +67,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) => const AccountScreen()));
                     },
-                    icon: const Icon(Icons.account_box),
+                    icon: const Icon(Icons.person),
                     color: Colors.grey,
                   ),
                   label: ''),
