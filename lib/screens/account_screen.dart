@@ -21,8 +21,17 @@ class _AccountScreenState extends State<AccountScreen> {
                   .copyWith(fontSize: 28, fontWeight: FontWeight.w700)),
           backgroundColor: Colors.black,
         ),
-        body: const SingleChildScrollView(
-            padding: EdgeInsets.all(40), child: Column(children: <Widget>[])),
+        body: const  SingleChildScrollView(
+            padding:  EdgeInsets.all(40),
+            child: Column(children: <Widget>[
+              Image(image:
+              AssetImage('images/Lion ♌🦁🦁🦁🦁🦁🦁.jpeg')
+              )
+
+
+            ]
+            )
+        ),
         bottomNavigationBar: SizedBox(
           height: 78,
           child: BottomNavigationBar(
