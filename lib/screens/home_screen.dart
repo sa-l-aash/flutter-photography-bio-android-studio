@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//importing google fonts
 import 'package:google_fonts/google_fonts.dart';
 import 'package:playground/screens/account_screen.dart';
 import 'package:playground/screens/favorite_screen.dart';
@@ -12,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  //a function to show the details of a photo once it is tapped
   showPictureDetails(BuildContext context) {
     showDialog(
         context: context,
@@ -30,6 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        //the app bar
         appBar: AppBar(
           title: Text(
             'Jidetta Troy',
@@ -38,85 +41,30 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           backgroundColor: Colors.black,
         ),
+        //the boy of the app
         body: SingleChildScrollView(
+          //spacing
           padding: const EdgeInsets.all(10),
           child: Column(children: <Widget>[
-            //
-            const Text(''),
-            InkWell(
-              onTap: () {
-                showPictureDetails(context);
-              },
-              child: ClipRRect(
-                  borderRadius: BorderRadius.circular(40),
-                  child: const Image(
-                    image: NetworkImage(
-                        'https://images.pexels.com/photos/14384723/pexels-photo-14384723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                    fit: BoxFit.contain,
-                  )),
-            ),
-
-            const Text(''),
-            InkWell(
-              onTap: () {},
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(40),
-                child: const Image(
-                  image: NetworkImage(
-                      'https://images.pexels.com/photos/16503530/pexels-photo-16503530/free-photo-of-man-wearing-bright-clothing-standing-in-a-muddy-field.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'),
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
-            const Text(''),
-            InkWell(
-              onTap: () {},
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(40),
-                child: const Image(
-                  image: NetworkImage(
-                      'https://images.pexels.com/photos/16883535/pexels-photo-16883535/free-photo-of-woman-in-white-dress-posing-in-building-door.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'),
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
-            const Text(''),
-            InkWell(
-              onTap: () {},
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(40),
-                child: const Image(
-                  image: NetworkImage(
-                      'https://images.pexels.com/photos/6110294/pexels-photo-6110294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
-            const Text(''),
-            InkWell(
-              onTap: () {},
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(40),
-                child: const Image(
-                  image: NetworkImage(
-                      'https://images.pexels.com/photos/17747475/pexels-photo-17747475/free-photo-of-the-end-of-another-day.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'),
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
-            const Text(''),
-            InkWell(
-              onTap: () {},
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(40),
-                child: const Image(
-                  image: NetworkImage(
-                      'https://images.pexels.com/photos/17688887/pexels-photo-17688887/free-photo-of-picnic-rose-in-summer.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'),
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
-            const Text(''),
+            for (var imageUrl in [
+              'https://images.pexels.com/photos/14384723/pexels-photo-14384723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+                  'https://images.pexels.com/photos/16503530/pexels-photo-16503530/free-photo-of-man-wearing-bright-clothing-standing-in-a-muddy-field.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+                  'https://images.pexels.com/photos/16883535/pexels-photo-16883535/free-photo-of-woman-in-white-dress-posing-in-building-door.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+                  'https://images.pexels.com/photos/6110294/pexels-photo-6110294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+                  'https://images.pexels.com/photos/17747475/pexels-photo-17747475/free-photo-of-the-end-of-another-day.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+                  'https://images.pexels.com/photos/17688887/pexels-photo-17688887/free-photo-of-picnic-rose-in-summer.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+            ])
+              Column(children: [
+                const SizedBox(height: 10),
+                InkWell(
+                    onTap: () {
+                      showPictureDetails(context);
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(40),
+                      child: Image.network(imageUrl, fit: BoxFit.contain),
+                    ))
+              ])
           ]),
         ),
         bottomNavigationBar: SizedBox(
