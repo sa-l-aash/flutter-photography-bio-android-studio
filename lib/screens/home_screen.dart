@@ -13,36 +13,41 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  //a function to show the details of a photo once it is tapped
   final List<Widget> imageWidgetList = [];
 
   @override
   void initState() {
     super.initState();
 
-    print(1);
     initImageList();
-    print(1);
   }
 
   Widget imageTile(BuildContext context, String imageUrl) {
-    return InkWell(
-        onTap: () {
-          showPictureDetails(context);
-        },
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(40),
-          child: Image.network(imageUrl, fit: BoxFit.contain),
-        ));
+    return Column(
+      children: [
+        InkWell(
+          onTap: () {
+            showPictureDetails(context);
+          },
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(40),
+            child: Image.network(imageUrl, fit: BoxFit.contain),
+          ),
+        ),
+        //this adds a space between the images
+        const SizedBox(height: 20),
+      ],
+    );
   }
 
   void initImageList() {
     int i = 0;
-    while(i < imagesUrlStrings.length){
+    while (i < imagesUrlStrings.length) {
       imageWidgetList.add(imageTile(context, imagesUrlStrings[i]));
       i++;
     }
   }
+  //a function to show the details of a photo once it is tapped
 
   showPictureDetails(BuildContext context) {
     showDialog(
@@ -60,12 +65,12 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   final List imagesUrlStrings = [
-    'https://images.pexels.com/photos/14384723/pexels-photo-14384723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        'https://images.pexels.com/photos/16503530/pexels-photo-16503530/free-photo-of-man-wearing-bright-clothing-standing-in-a-muddy-field.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
-        'https://images.pexels.com/photos/16883535/pexels-photo-16883535/free-photo-of-woman-in-white-dress-posing-in-building-door.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
-        'https://images.pexels.com/photos/6110294/pexels-photo-6110294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        'https://images.pexels.com/photos/17747475/pexels-photo-17747475/free-photo-of-the-end-of-another-day.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
-        'https://images.pexels.com/photos/17688887/pexels-photo-17688887/free-photo-of-picnic-rose-in-summer.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
+    'https://images.pexels.com/photos/14384723/pexels-photo-14384723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    'https://images.pexels.com/photos/16503530/pexels-photo-16503530/free-photo-of-man-wearing-bright-clothing-standing-in-a-muddy-field.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+    'https://images.pexels.com/photos/16883535/pexels-photo-16883535/free-photo-of-woman-in-white-dress-posing-in-building-door.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+    'https://images.pexels.com/photos/6110294/pexels-photo-6110294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    'https://images.pexels.com/photos/17747475/pexels-photo-17747475/free-photo-of-the-end-of-another-day.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+    'https://images.pexels.com/photos/17688887/pexels-photo-17688887/free-photo-of-picnic-rose-in-summer.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
   ];
 
   @override
@@ -80,14 +85,16 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           backgroundColor: Colors.black,
         ),
-        //the boy of the app
+        //the body of the app
         body: SingleChildScrollView(
           //spacing
           padding: const EdgeInsets.all(10),
+
           child: Column(children: <Widget>[
+            //the imageList are called here
             ...imageWidgetList,
             const Column(children: [
-               SizedBox(height: 10),
+              SizedBox(height: 10),
             ])
           ]),
         ),
