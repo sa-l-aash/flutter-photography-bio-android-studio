@@ -20,7 +20,9 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
 
+    print(1);
     initImageList();
+    print(1);
   }
 
   Widget imageTile(BuildContext context, String imageUrl) {
@@ -35,8 +37,10 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void initImageList() {
-    for (int i = 0; i == imagesUrlStrings.length; i++) {
+    int i = 0;
+    while(i < imagesUrlStrings.length){
       imageWidgetList.add(imageTile(context, imagesUrlStrings[i]));
+      i++;
     }
   }
 
