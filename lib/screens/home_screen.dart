@@ -56,12 +56,13 @@ class _HomeScreenState extends State<HomeScreen> {
         builder: (context) {
           return AlertDialog(
               title: Text(
-                '',
+                'picture name',
                 style: GoogleFonts.aboreto()
                     .copyWith(fontSize: 25, fontWeight: FontWeight.w700),
               ),
-              content: const Column(
-                  mainAxisSize: MainAxisSize.min, children: [TextField()]));
+              content: const Column(mainAxisSize: MainAxisSize.min, children: [
+                Text('yearTaken:'),
+              ]));
         });
   }
 
