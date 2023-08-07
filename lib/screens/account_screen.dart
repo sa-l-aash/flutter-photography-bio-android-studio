@@ -18,17 +18,15 @@ class _AccountScreenState extends State<AccountScreen> {
         appBar: AppBar(
           title: Text(' Account',
               style: GoogleFonts.alkatra()
-                  .copyWith(fontSize: 28, fontWeight: FontWeight.w700)
-          ),
+                  .copyWith(fontSize: 28, fontWeight: FontWeight.w700)),
           actions: [
             IconButton(
-              icon:const Icon(Icons.settings),
-
-            onPressed: () {
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> const HomeScreen()));
-            }  )
+                icon: const Icon(Icons.settings),
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const HomeScreen()));
+                })
           ],
-
           backgroundColor: Colors.black,
         ),
         body: SingleChildScrollView(
@@ -37,7 +35,7 @@ class _AccountScreenState extends State<AccountScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Center(
-                    child:ClipRRect(
+                    child: ClipRRect(
                       borderRadius: BorderRadius.circular(900),
                       child: const Image(
                         image: AssetImage('images/HD WALLPAPER.jpeg'),
@@ -48,10 +46,7 @@ class _AccountScreenState extends State<AccountScreen> {
                         //      width: MediaQuery.of(context).size.width * 0.9,
                       ),
                     ),
-
                   ),
-
-
                 ])),
         bottomNavigationBar: SizedBox(
           height: 78,

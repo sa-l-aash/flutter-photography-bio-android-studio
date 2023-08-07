@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:playground/screens/account_screen.dart';
 import 'package:playground/screens/favorite_screen.dart';
 import 'package:playground/screens/search_screen.dart';
+//import 'package:playground/models/picture_model.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -55,12 +56,12 @@ class _HomeScreenState extends State<HomeScreen> {
         builder: (context) {
           return AlertDialog(
               title: Text(
-                'Picture name',
+                '',
                 style: GoogleFonts.aboreto()
                     .copyWith(fontSize: 25, fontWeight: FontWeight.w700),
               ),
-              content:
-                  const Column(mainAxisSize: MainAxisSize.min, children: []));
+              content: const Column(
+                  mainAxisSize: MainAxisSize.min, children: [TextField()]));
         });
   }
 
