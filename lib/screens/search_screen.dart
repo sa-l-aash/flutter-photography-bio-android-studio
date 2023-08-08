@@ -103,7 +103,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     },
                     icon: const Icon(
                       Icons.home,
-                      color: Colors.white,
+                      color: Colors.grey,
                     ),
                   ),
                   label: ''),
@@ -114,7 +114,7 @@ class _SearchScreenState extends State<SearchScreen> {
                           builder: (context) => const SearchScreen()));
                     },
                     icon: const Icon(Icons.search),
-                    color: Colors.grey,
+                    color: Colors.white,
                   ),
                   label: ''),
               BottomNavigationBarItem(

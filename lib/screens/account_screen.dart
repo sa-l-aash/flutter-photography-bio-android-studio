@@ -66,7 +66,7 @@ class _AccountScreenState extends State<AccountScreen> {
                     },
                     icon: const Icon(
                       Icons.home,
-                      color: Colors.white,
+                      color: Colors.grey,
                     ),
                   ),
                   label: ''),
@@ -97,7 +97,7 @@ class _AccountScreenState extends State<AccountScreen> {
                           builder: (context) => const HomeScreen()));
                     },
                     icon: const Icon(Icons.person),
-                    color: Colors.grey,
+                    color: Colors.white,
                   ),
                   label: ''),
             ],

@@ -65,7 +65,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                     },
                     icon: const Icon(
                       Icons.home,
-                      color: Colors.white,
+                      color: Colors.grey,
                     ),
                   ),
                   label: ''),
@@ -86,7 +86,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                           builder: (context) => const HomeScreen()));
                     },
                     icon: const Icon(Icons.favorite),
-                    color: Colors.grey,
+                    color: Colors.white,
                   ),
                   label: ''),
               BottomNavigationBarItem(

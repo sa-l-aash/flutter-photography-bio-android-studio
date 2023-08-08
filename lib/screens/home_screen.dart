@@ -15,7 +15,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final List<Widget> imageWidgetList = [];
+  final List<Widget> imageWidgetList = [
+
+  ];
 
   @override
   void initState() {
@@ -62,6 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     .copyWith(fontSize: 25, fontWeight: FontWeight.w700),
               ),
               content: const Column(mainAxisSize: MainAxisSize.min, children: [
+                Text('genre:'),
                 Text('yearTaken:'),
               ]));
         });
