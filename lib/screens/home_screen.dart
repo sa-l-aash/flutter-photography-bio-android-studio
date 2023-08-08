@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //importing google fonts
 import 'package:google_fonts/google_fonts.dart';
+import 'package:playground/screens/about_screen.dart';
 import 'package:playground/screens/account_screen.dart';
 import 'package:playground/screens/favorite_screen.dart';
 import 'package:playground/screens/search_screen.dart';
@@ -97,7 +98,18 @@ class _HomeScreenState extends State<HomeScreen> {
             ...imageWidgetList,
             const Column(children: [
               SizedBox(height: 10),
-            ])
+            ]),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (context) => const AboutScreen()));
+              },
+              child: Text('JIDETTA TROY 2023. ALL RIGHTS RESERVED.',
+                  style: GoogleFonts.alkatra().copyWith(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black)),
+            )
           ]),
         ),
         bottomNavigationBar: SizedBox(
