@@ -47,6 +47,10 @@ class _AccountScreenState extends State<AccountScreen> {
                       ),
                     ),
                   ),
+                  const Text(''),
+                  Text('Username',
+                      style: GoogleFonts.alkatra()
+                          .copyWith(fontSize: 25, fontWeight: FontWeight.w700)),
                 ])),
         bottomNavigationBar: SizedBox(
           height: 78,
