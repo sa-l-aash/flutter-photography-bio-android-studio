@@ -12,6 +12,47 @@ class AccountScreen extends StatefulWidget {
 }
 
 class _AccountScreenState extends State<AccountScreen> {
+  showSavedImages(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+              backgroundColor: Colors.black,
+              contentPadding: const EdgeInsets.only(left: 25, right: 25),
+              title: Center(
+                child: Text('Saved',
+                    style: GoogleFonts.aboreto().copyWith(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white)),
+              ),
+              content: const SizedBox(
+                  height: 350,
+                  width: 300,
+                  child: SingleChildScrollView(
+                    child: Column(mainAxisSize: MainAxisSize.min, children: [
+                      SizedBox(height: 5),
+                      Image(
+                        image: AssetImage(
+                            'images/H304 THE COLOURFUL HOLIDAY.jpeg'),
+                        width: 300,
+                        height: 400,
+                      ),
+                      Image(
+                        image: AssetImage('images/HD WALLPAPER.jpeg'),
+                        width: 300,
+                        height: 400,
+                      ),
+                      Image(
+                        image: AssetImage('images/View of the sky_.png'),
+                        width: 300,
+                        height: 400,
+                      ),
+                    ]),
+                  )));
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,9 +89,18 @@ class _AccountScreenState extends State<AccountScreen> {
                     ),
                   ),
                   const Text(''),
-                  Text('Username',
+                  Text('Username:  JIDETTA',
                       style: GoogleFonts.alkatra()
                           .copyWith(fontSize: 25, fontWeight: FontWeight.w700)),
+                  TextButton(
+                      onPressed: () {
+                        showSavedImages(context);
+                      },
+                      child: Text('saved',
+                          style: GoogleFonts.alkatra().copyWith(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.black)))
                 ])),
         bottomNavigationBar: SizedBox(
           height: 78,
