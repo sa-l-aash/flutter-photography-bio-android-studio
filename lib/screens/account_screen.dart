@@ -12,41 +12,38 @@ class AccountScreen extends StatefulWidget {
 }
 
 class _AccountScreenState extends State<AccountScreen> {
+  //a function for an alert dialog
   showSavedImages(BuildContext context) {
     showDialog(
         context: context,
         builder: (context) {
           return AlertDialog(
-              backgroundColor: Colors.black,
               contentPadding: const EdgeInsets.only(left: 25, right: 25),
               title: Center(
                 child: Text('Saved',
                     style: GoogleFonts.aboreto().copyWith(
                         fontSize: 25,
                         fontWeight: FontWeight.w700,
-                        color: Colors.white)),
+                        color: Colors.black)),
               ),
               content: const SizedBox(
-                  height: 350,
-                  width: 300,
+                  height: 400,
+                  width: 250,
                   child: SingleChildScrollView(
-                    child: Column(mainAxisSize: MainAxisSize.min, children: [
-                      SizedBox(height: 5),
+                    child: Column(children: [
+                      SizedBox(height: 8),
                       Image(
                         image: AssetImage(
                             'images/H304 THE COLOURFUL HOLIDAY.jpeg'),
                         width: 300,
-                        height: 400,
                       ),
                       Image(
                         image: AssetImage('images/HD WALLPAPER.jpeg'),
                         width: 300,
-                        height: 400,
                       ),
                       Image(
                         image: AssetImage('images/View of the sky_.png'),
                         width: 300,
-                        height: 400,
                       ),
                     ]),
                   )));
