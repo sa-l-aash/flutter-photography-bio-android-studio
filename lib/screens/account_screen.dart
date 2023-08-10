@@ -45,6 +45,14 @@ class _AccountScreenState extends State<AccountScreen> {
                         image: AssetImage('images/View of the sky_.png'),
                         width: 300,
                       ),
+                      Image(
+                        image: AssetImage('images/photo1.png'),
+                        width: 300,
+                      ),
+                      Image(
+                        image: AssetImage('images/photo2.png'),
+                        width: 300,
+                      ),
                     ]),
                   )));
         });
