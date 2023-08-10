@@ -15,9 +15,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final List<Widget> imageWidgetList = [
-
-  ];
+  final List<Widget> imageWidgetList = [];
 
   @override
   void initState() {
