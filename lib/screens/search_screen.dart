@@ -6,11 +6,30 @@ import 'package:playground/screens/home_screen.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
+
   @override
   State<SearchScreen> createState() => _SearchScreenState();
 }
 
 class _SearchScreenState extends State<SearchScreen> {
+  List<String> items = [
+    'Nature',
+    'Seas',
+    'Cars',
+    'Wildlife',
+    'Skies',
+    'People',
+    'Children',
+    'Pets',
+    'Buildings'
+  ];
+  String? selectedItem = 'Nature';
+  DropdownMenuItem<String> buildMenuItem(String item) => DropdownMenuItem(
+      child: Text('item ',
+          style: GoogleFonts.alkatra().copyWith(
+              fontSize: 14,
+              fontWeight: FontWeight.w700,
+              color: Colors.black87)));
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,55 +53,32 @@ class _SearchScreenState extends State<SearchScreen> {
               Text('Ideas for you',
                   style: GoogleFonts.alkatra().copyWith(
                     fontSize: 28,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.bold,
                   )),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.black),
-                      child: Text(
-                        'Nature',
-                        style: GoogleFonts.alkatra().copyWith(
-                            fontSize: 14, fontWeight: FontWeight.w700),
-                      )),
-                  ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.black),
-                      child: Text(
-                        'Seas',
-                        style: GoogleFonts.alkatra().copyWith(
-                            fontSize: 14, fontWeight: FontWeight.w700),
-                      )),
-                  ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.black),
-                      child: Text(
-                        'Cars',
-                        style: GoogleFonts.alkatra().copyWith(
-                            fontSize: 14, fontWeight: FontWeight.w700),
-                      )),
-                  ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.black),
-                      child: Text(
-                        'Wildlife',
-                        style: GoogleFonts.alkatra().copyWith(
-                            fontSize: 14, fontWeight: FontWeight.w700),
-                      )),
-                ],
+              const Text(''),
+              SizedBox(
+                width: 200,
+                child: DropdownButtonFormField<String>(
+                  iconSize: 25,
+                  iconEnabledColor: Colors.black,
+                  menuMaxHeight: 200,
+                  decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: const BorderSide(width: 2, color: Colors.black),
+                  )),
+                  value: selectedItem,
+                  items: items
+                      .map((item) => DropdownMenuItem<String>(
+                            value: item,
+                            child: Text(item,
+                                style: const TextStyle(fontSize: 20)),
+                          ))
+                      .toList(),
+                  onChanged: (item) => setState(() => selectedItem = item),
+                ),
               ),
               const Text(''),
-              Text('Popular',
-                  style: GoogleFonts.alkatra().copyWith(
-                    fontSize: 28,
-                    fontWeight: FontWeight.w700,
-                  )),
             ])),
 
         //BOTTOM NAVIGATION BAR
@@ -98,7 +94,7 @@ class _SearchScreenState extends State<SearchScreen> {
               BottomNavigationBarItem(
                   icon: IconButton(
                     onPressed: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => const HomeScreen()));
                     },
                     icon: const Icon(
@@ -110,7 +106,7 @@ class _SearchScreenState extends State<SearchScreen> {
               BottomNavigationBarItem(
                   icon: IconButton(
                     onPressed: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => const SearchScreen()));
                     },
                     icon: const Icon(Icons.search),
@@ -120,7 +116,7 @@ class _SearchScreenState extends State<SearchScreen> {
               BottomNavigationBarItem(
                   icon: IconButton(
                     onPressed: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => const FavoriteScreen()));
                     },
                     icon: const Icon(Icons.favorite),
@@ -130,7 +126,7 @@ class _SearchScreenState extends State<SearchScreen> {
               BottomNavigationBarItem(
                   icon: IconButton(
                     onPressed: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => const AccountScreen()));
                     },
                     icon: const Icon(Icons.person),
