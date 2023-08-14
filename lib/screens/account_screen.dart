@@ -30,6 +30,7 @@ class _AccountScreenState extends State<AccountScreen> {
                   height: 400,
                   width: 250,
                   child: SingleChildScrollView(
+                    padding: EdgeInsets.symmetric(vertical: 10),
                     child: Column(children: [
                       SizedBox(height: 8),
                       Image(
@@ -43,14 +44,6 @@ class _AccountScreenState extends State<AccountScreen> {
                       ),
                       Image(
                         image: AssetImage('images/View of the sky_.png'),
-                        width: 300,
-                      ),
-                      Image(
-                        image: AssetImage('images/photo1.png'),
-                        width: 300,
-                      ),
-                      Image(
-                        image: AssetImage('images/photo2.png'),
                         width: 300,
                       ),
                     ]),
